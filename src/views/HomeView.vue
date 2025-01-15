@@ -2,23 +2,7 @@
   <div class="home">
     <Carousel />
     <div class="container">
-      <div class="history-section">
-        <h2>História Slovenskej armády</h2>
-        <div class="history-content">
-          <div class="history-block">
-            <h3>1993 - Vznik Slovenskej armády</h3>
-            <p>Po rozdelení Československa vznikli samostatné ozbrojené sily SR.</p>
-          </div>
-          <div class="history-block">
-            <h3>2004 - Vstup do NATO</h3>
-            <p>Slovensko sa stalo členom Severoatlantickej aliancie.</p>
-          </div>
-          <div class="history-block">
-            <h3>Modernizácia</h3>
-            <p>Postupná modernizácia výzbroje a technického vybavenia.</p>
-          </div>
-        </div>
-      </div>
+      <HistorySection />
 
       <div class="featured-sections">
         <h2>Hlavné kategórie vojenskej techniky</h2>
@@ -38,13 +22,16 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import Carousel from '@/components/Carousel.vue'
+import HistorySection from '@/components/HistorySection.vue'
 
-export default {
+export default defineComponent({
   name: 'HomeView',
   components: {
-    Carousel
+    Carousel,
+    HistorySection
   },
   data() {
     return {
@@ -77,7 +64,7 @@ export default {
       ]
     }
   }
-}
+})
 </script>
 
 <style scoped>
@@ -85,22 +72,6 @@ export default {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-}
-
-.history-section {
-  background-color: #1E1E1E;
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2rem 0;
-}
-
-.history-block {
-  margin: 1.5rem 0;
-}
-
-.history-block h3 {
-  color: #1976D2;
-  margin-bottom: 0.5rem;
 }
 
 .category-grid {
