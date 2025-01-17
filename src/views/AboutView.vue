@@ -5,7 +5,7 @@
         <v-col cols="12" md="10" lg="8">
           <v-card class="about-card">
             <v-img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/1920px-Flag_of_Slovakia.svg.png "
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/1920px-Flag_of_Slovakia.svg.png"
                 height="300"
                 class="about-header-image"
                 gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.9)"
@@ -16,7 +16,6 @@
                 </v-card-title>
               </div>
             </v-img>
-
 
             <v-card-text class="pa-6">
               <div class="description-section mb-8">
@@ -58,30 +57,11 @@
                 </v-col>
               </v-row>
 
-              <v-card class="mission-card mb-8" elevation="2">
-                <v-card-title class="text-h5">
-                  <v-icon left color="primary">mdi-target</v-icon>
-                  Naša misia
-                </v-card-title>
-                <v-card-text>
-                  <v-list>
-                    <v-list-item v-for="(mission, index) in missions" :key="index">
-                      <v-list-item-icon>
-                        <v-icon color="primary">mdi-check-circle</v-icon>
-                      </v-list-item-icon>
-                      <v-list-item-content>
-                        <v-list-item-title>{{ mission }}</v-list-item-title>
-                      </v-list-item-content>
-                    </v-list-item>
-                  </v-list>
-                </v-card-text>
-              </v-card>
-
               <ContactForm class="mb-8" />
 
               <v-card class="social-card" elevation="2">
                 <v-card-title class="text-h5">
-                  <v-icon left color="primary">mdi-share-variant</v-icon>
+                  <v-icon start color="primary">mdi-share-variant</v-icon>
                   Sledujte nás
                 </v-card-title>
                 <v-card-text>
@@ -93,7 +73,7 @@
                         :href="social.link"
                         target="_blank"
                         icon
-                        large
+                        size="large"
                     >
                       <v-icon>{{ social.icon }}</v-icon>
                     </v-btn>
@@ -119,31 +99,25 @@ export default defineComponent({
   },
   data() {
     return {
-      missions: [
-        'Vzdelávať verejnosť o technologickom vybavení Slovenskej armády',
-        'Prezentovať technologický pokrok v obranných systémoch',
-        'Poskytovať autentické informácie o vojenskej technike',
-        'Podporovať záujem o moderné vojenské technológie'
-      ],
       socials: [
         {
           icon: 'mdi-facebook',
-          link: 'https://facebook.com/slovenska.armada',
+          link: 'https://facebook.com',
           color: '#1877F2'
         },
         {
           icon: 'mdi-twitter',
-          link: 'https://twitter.com/slovenska_armada',
+          link: 'https://twitter.com',
           color: '#1DA1F2'
         },
         {
           icon: 'mdi-instagram',
-          link: 'https://instagram.com/slovenska_armada',
+          link: 'https://instagram.com',
           color: '#E4405F'
         },
         {
           icon: 'mdi-youtube',
-          link: 'https://youtube.com/slovenskaarmada',
+          link: 'https://youtube.com',
           color: '#FF0000'
         }
       ]

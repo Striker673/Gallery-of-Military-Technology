@@ -74,8 +74,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
-import { Vehicle } from '@/types/vehicle';
+import { defineComponent } from 'vue';
+import type { PropType } from 'vue';
+import type { Vehicle } from '@/types/vehicle';
 
 export default defineComponent({
   name: 'VehicleCard',

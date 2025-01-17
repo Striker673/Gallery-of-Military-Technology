@@ -72,7 +72,7 @@ h2 {
 }
 
 h3 {
-  color: #00008B;
+  color: #1976D2;
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }

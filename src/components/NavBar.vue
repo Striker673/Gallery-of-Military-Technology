@@ -18,7 +18,6 @@
 
       <v-spacer />
 
-      <!-- Desktop navigation buttons -->
       <div class="navigation-buttons" :class="{ 'hidden-mobile': isMobile }">
         <v-btn to="/" variant="text">Domov</v-btn>
         <v-btn to="/aircraft" variant="text">Lietadlá</v-btn>
@@ -29,7 +28,6 @@
         <v-btn to="/about" variant="text">O nás</v-btn>
       </div>
 
-      <!-- Mobile menu button -->
       <v-app-bar-nav-icon
           v-show="isMobile"
           @click="drawer = !drawer"
@@ -37,7 +35,6 @@
       ></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <!-- Mobile navigation drawer -->
     <v-navigation-drawer
         v-model="drawer"
         location="right"
@@ -106,7 +103,7 @@ export default defineComponent({
           icon: 'mdi-helicopter'
         },
         {
-          title: 'Artiléria',
+          title: 'Delostrelectvo',
           path: '/artillery',
           icon: 'mdi-dump-truck'
         },

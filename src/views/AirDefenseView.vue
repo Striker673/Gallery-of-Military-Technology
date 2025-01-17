@@ -6,47 +6,30 @@
       </transition>
     </router-view>
 
-    <div v-if="!$route.params.id">
-      <h1>Protivzdušná obrana</h1>
-      <v-row>
-        <v-col v-for="defense in airDefense"
-               :key="defense.id"
-               cols="12"
-               sm="6"
-               md="4"
-               lg="3"
-        >
-          <VehicleCard
-              :vehicle="defense"
-              @click:details="showDetails"
-          />
-        </v-col>
-      </v-row>
-    </div>
+    <VehicleBaseView
+        v-if="!route.params.id"
+        title="Protivzdušná obrana"
+        :vehicles="airDefense"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 import { useVehicleStore } from '@/stores/vehicles';
-import VehicleCard from '@/components/VehicleCard.vue';
+import VehicleBaseView from '@/components/VehicleBaseView.vue';
 
 export default defineComponent({
   name: 'AirDefenseView',
-  components: { VehicleCard },
+  components: { VehicleBaseView },
 
   setup() {
-    const router = useRouter();
+    const route = useRoute();
     const store = useVehicleStore();
-
-    const showDetails = (defense) => {
-      router.push({ name: 'airDefense.detail', params: { id: defense.id.toString() } });
-    };
-
     return {
-      airDefense: store.getAirDefense,
-      showDetails
+      route,
+      airDefense: store.getAirDefense
     };
   }
 });
@@ -55,15 +38,7 @@ export default defineComponent({
 <style scoped>
 .air-defense-view {
   padding: 2rem;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 </style>
