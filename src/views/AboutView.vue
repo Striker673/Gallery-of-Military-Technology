@@ -7,10 +7,11 @@
             <v-img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/1920px-Flag_of_Slovakia.svg.png"
                 height="300"
+                cover
                 class="about-header-image"
                 gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.9)"
             >
-              <div class="header-title-container">
+              <div class="header-title-container d-flex align-center justify-center h-100">
                 <v-card-title class="text-h3 text-white text-center">
                   O našej vojenskej technike
                 </v-card-title>
@@ -61,12 +62,12 @@
               <ContactForm class="mb-8" />
 
               <v-card class="social-card" elevation="2">
-                <v-card-title class="text-h5">
-                  <v-icon start color="primary">mdi-share-variant</v-icon>
-                  Sledujte nás
-                </v-card-title>
-                <v-card-text>
-                  <div class="d-flex justify-center gap-4">
+                <v-card-text class="d-flex flex-column align-center py-4">
+                  <div class="text-h5 d-flex align-center mb-4">
+                    <v-icon start color="primary" class="me-2">mdi-share-variant</v-icon>
+                    Sledujte nás
+                  </div>
+                  <div class="d-flex justify-center align-center gap-4">
                     <v-btn
                         v-for="(social, index) in socials"
                         :key="index"
@@ -128,6 +129,26 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.about-header-image {
+  position: relative;
+}
+
+.header-title-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v-card-title {
+  font-size: 3rem !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
 .about-view {
   background: linear-gradient(135deg, #27276b 0%, #1E1E1E 100%);
   min-height: 100vh;
@@ -170,5 +191,13 @@ export default defineComponent({
   .about-header-image {
     height: 200px !important;
   }
+}
+.social-card {
+  background-color: #2A2A2A !important;
+  border-radius: 12px;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 </style>
