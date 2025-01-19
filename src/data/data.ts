@@ -78,7 +78,6 @@ export const VehicleName: Vehicle[] = [
         description: 'Taktický transportný lietadlo používané slovenským letectvom.'
     },
 
-    // HELIKOPTÉRY
     {
         id: 6,
         name: 'UH-60M Black Hawk',

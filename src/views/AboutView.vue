@@ -16,16 +16,17 @@
                 </v-card-title>
               </div>
             </v-img>
-
             <v-card-text class="pa-6">
-              <div class="description-section mb-8">
-                <p class="text-body-1">
-                  Vitajte na stránke venovanej vojenskej technike Slovenskej armády.
-                  Táto platforma slúži ako komplexný informačný portál o technických prostriedkoch
-                  používaných v našich moderných ozbrojených silách. Našim cieľom je poskytnúť
-                  presné a aktuálne informácie o vybavení, ktoré chráni našu krajinu.
-                </p>
-              </div>
+              <v-card class="welcome-card mb-8" elevation="2">
+                <v-card-text>
+                  <p class="text-body-1">
+                    Vitajte na stránke venovanej vojenskej technike Slovenskej armády.
+                    Táto platforma slúži ako komplexný informačný portál o technických prostriedkoch
+                    používaných v našich moderných ozbrojených silách. Našim cieľom je poskytnúť
+                    presné a aktuálne informácie o vybavení, ktoré chráni našu krajinu.
+                  </p>
+                </v-card-text>
+              </v-card>
 
               <v-row class="stats-grid mb-8">
                 <v-col cols="12" md="4">
@@ -102,22 +103,22 @@ export default defineComponent({
       socials: [
         {
           icon: 'mdi-facebook',
-          link: 'https://facebook.com',
+          link: 'https://www.facebook.com/ozbrojenesily.sr/?locale=sk_SK',
           color: '#1877F2'
         },
         {
           icon: 'mdi-twitter',
-          link: 'https://twitter.com',
+          link: 'https://x.com/ozbrojenesily',
           color: '#1DA1F2'
         },
         {
           icon: 'mdi-instagram',
-          link: 'https://instagram.com',
+          link: 'https://www.instagram.com/ozbrojenesily.sr/',
           color: '#E4405F'
         },
         {
           icon: 'mdi-youtube',
-          link: 'https://youtube.com',
+          link: 'https://www.youtube.com/channel/UCgA71QWa-XhbOXhdzefNUQg',
           color: '#FF0000'
         }
       ]
@@ -141,6 +142,10 @@ export default defineComponent({
 
 .about-header-image {
   position: relative;
+}
+
+.welcome-card {
+  background-color: #2A2A2A !important;
 }
 
 .stat-card, .mission-card, .social-card {

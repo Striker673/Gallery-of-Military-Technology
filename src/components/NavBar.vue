@@ -47,11 +47,11 @@
             :key="item.path"
             :to="item.path"
             @click="drawer = false"
-            color="#27276b"
+            color="#white"
             class="mb-2"
         >
           <template v-slot:prepend>
-            <v-icon :icon="item.icon" color="#27276b"></v-icon>
+            <v-icon :icon="item.icon" color="#white"></v-icon>
           </template>
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>

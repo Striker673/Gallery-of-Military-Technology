@@ -35,7 +35,8 @@ export default defineComponent({
 
 <style scoped>
 .contact-form {
-  background: #4b4b4b;
+  background: #2A2A2A;
+;
   padding: 2rem;
   border-radius: 12px;
   max-width: 500px;
